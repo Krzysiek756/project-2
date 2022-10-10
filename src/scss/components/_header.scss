@@ -1,0 +1,239 @@
+// * {
+//     // position: relative;
+// }
+
+
+html {
+    font-size: 10px;
+}
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+
+.container {
+    max-width: 952px !important;
+    margin: 0 auto;
+}
+
+.hidden {
+    overflow: hidden;
+}
+
+/************NAV STYLE*************/
+
+
+.header {
+   
+    display: flex;
+  //  position: relative;
+  
+   
+    &__content {
+        background-color: $white-color;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin: 7px 12px;
+        box-shadow: 0px 3px 11px rgba(0, 0, 0, 0.1);
+        border-radius: 24px;
+    
+       
+        
+        
+
+        @include md {
+            justify-content: space-between;
+           margin: 0;
+           margin-top: 17px;
+        //    background-color: blue;
+           padding: 0px 30px;
+        }
+    }
+
+    .menu {
+      
+        position: absolute;
+        left: 0;
+    //    / top: 60px;
+        right: 0;
+        bottom:0;
+        height: 100vh;
+        background-color: $gray-color;
+        z-index: 1;
+        
+        
+
+        display:none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        
+        @include md {
+            position: initial;
+            height: fit-content;
+            top: 0;
+            background-color: transparent;
+            display: flex;
+            margin-right: -30px;
+        }
+        &.is-active {
+            display:flex;
+        }
+        &__item {
+                // background-color: red;
+                position: relative;
+                 
+                    &:hover {
+
+                        &::before {
+                                opacity: 1;
+                                max-width: 100%;
+                        }
+                    }
+               
+              
+                   
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            bottom:-15px;
+                            width: 100%;
+                            
+                            height: 3px;
+                            background: $red-color;
+                            opacity: 0;
+                            max-width: 0;
+                            transition: .3s;
+                        }
+                        &:nth-last-child(1) {
+                            
+                            &::before {
+                                height: 0;
+                            }
+                        }
+                    
+               
+               
+            a {
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 3.5rem;
+                line-height: 19px;
+                
+                
+
+                &:hover {
+                    color: $red-color;
+                    transition: .3s;
+
+                }
+            }
+
+            @include md {
+                a {
+                    font-size: 1.6rem;
+                    color: $gray-color;
+
+                    &:hover {
+                        color: unset;
+                    }
+                }
+            }
+
+
+        }
+
+        &__list {
+            // padding-top: 30%;
+            padding: 45px 15px 15px 15px;
+
+            padding-top: 120px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            // position: fixed;
+            
+            width: 100%;
+            top: 0;
+            // height: 100%;
+            gap: 4.5rem;
+            text-transform: capitalize;
+            // z-index: 20;
+            background-color: $gray-color;
+
+
+
+            @include md {
+                padding-top: unset;
+                height: inherit;
+                display: flex;
+                flex-direction: row;
+                position: static;
+                background: inherit;
+                gap: 4rem;
+                padding: 0;
+                font-size: 1.6rem;
+                
+
+            }
+        }
+
+    }
+
+
+    &__logo {
+        position: relative;
+        padding-left: 17px;
+        z-index: 100;
+        
+    
+    }
+
+    .burger-navbar {
+        
+        padding-right: 14px;
+        color:black;
+        z-index: 10;
+
+    }
+
+
+
+  
+
+    .burger-navbar {
+        // z-index: 20;
+        // background-color: yellow;
+        @include md {
+            display: none;
+        }
+    }
+
+    .btn {
+        &:hover {
+            &::before {
+                max-width: 0!important;
+            }
+        }
+        
+        @include md {
+               
+        }
+        &--red {
+            background-color: $red-color;
+        }
+    }
+   
+
+}

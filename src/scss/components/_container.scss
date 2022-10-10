@@ -1,0 +1,29 @@
+/************Hero Container****************/
+
+
+.hero {
+
+    &__content {
+        // /background-color: red;
+
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+
+
+        @include md {
+            flex-direction: row;
+        }
+    }
+
+    // &__text {
+    //     //background-color: $grean-color;
+
+
+        
+    // }
+
+    &__image {
+        background-color: PINK;
+    }
+}
