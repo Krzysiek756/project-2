@@ -35,6 +35,8 @@ a {
    
     display: flex;
   //  position: relative;
+
+
   
    
     &__content {
@@ -43,7 +45,7 @@ a {
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        margin: 7px 12px;
+        margin: 12px 7px 0 7px;
         box-shadow: 0px 3px 11px rgba(0, 0, 0, 0.1);
         border-radius: 24px;
     
@@ -53,7 +55,6 @@ a {
 
         @include md {
             justify-content: space-between;
-           margin: 0;
            margin-top: 17px;
         //    background-color: blue;
            padding: 0px 30px;
@@ -204,7 +205,7 @@ a {
         
         padding-right: 14px;
         color:black;
-        z-index: 10;
+        z-index: 100;
 
     }
 

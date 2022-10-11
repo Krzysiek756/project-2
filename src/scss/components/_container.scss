@@ -3,12 +3,63 @@
 
 .hero {
 
+
+    &__bg--small {
+
+            width: 100%;
+            height: 301px;
+            background-color: blue;
+       
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+
+            @include md {
+                display: none;
+            }
+
+        }
+
+    &__bg--bg{
+
+        display: none;
+
+        @include md {
+            display: block;
+            position: absolute;
+            width: 100%;
+            bottom:0;
+            z-index: -1;
+            background-color: $grean-color;
+            
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    
+
+
+
+
+
+
     &__content {
-        // /background-color: red;
+
 
         display: flex;
         justify-content: space-between;
         flex-direction: column;
+        padding-top: 242px;
+        width: 100%;
+        padding-left: 27px;
+        padding-right: 27px;
+        background-color: blue;
+
+
 
 
         @include md {
@@ -16,14 +67,66 @@
         }
     }
 
-    // &__text {
-    //     //background-color: $grean-color;
+    &__btn-container {
+        display: flex;
+        gap: 11px;
+    }
 
+    &__text {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+        background-color: pink;
 
-        
-    // }
+         @include sm {
+            justify-content: center;
+            align-items: center;
+         }
+
+    }
 
     &__image {
-        background-color: PINK;
+        display: none;
+
+        @include md {
+            display: block;
+            background-color: yellow;
+        }
+    }
+
+    &__polygon {
+        position: absolute;
+        display: none;
+    }
+
+    &__subtitle {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+        padding-bottom: 7px;
+      
+
+
+    }
+
+    &__title {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 30px;
+        line-height: 37px;
+        text-transform: capitalize;
+        padding-bottom: 17px;
+     
+
+
+        span {
+            color: $red-color;
+            text-transform: uppercase;
+        }
     }
 }

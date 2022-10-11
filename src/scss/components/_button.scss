@@ -16,7 +16,7 @@
         background-color:$red-color;
 
         &:hover {
-            transform: scale(1.3);
+            transform: scale(1.1);
         }
 
         @include md {
@@ -39,7 +39,7 @@
         background-color:$grean-color;
 
         &:hover {
-            transform: scale(1.3);
+            transform: scale(1.1);
         }
 
         @include md {
