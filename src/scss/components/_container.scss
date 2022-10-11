@@ -4,48 +4,18 @@
 .hero {
 
 
-    &__bg--small {
+    background-image: url('/src/img/background.png');
+    background-repeat: no-repeat;
+    background-size: 100% 60%;
+    background-position: bottom;
+    margin: 0;
+    padding: 0;
+    min-height: 719px;
 
-            width: 100%;
-            height: 301px;
-            background-color: blue;
-       
 
-            img {
-                width: 100%;
-                height: 100%;
-            }
-
-            @include md {
-                display: none;
-            }
-
-        }
-
-    &__bg--bg{
-
-        display: none;
-
-        @include md {
-            display: block;
-            position: absolute;
-            width: 100%;
-            bottom:0;
-            z-index: -1;
-            background-color: $grean-color;
-            
-            img {
-                width: 100%;
-            }
-        }
+    @include lg {
+        background-size: 100% 100%;
     }
-
-    
-
-
-
-
-
 
     &__content {
 
@@ -57,19 +27,43 @@
         width: 100%;
         padding-left: 27px;
         padding-right: 27px;
-        background-color: blue;
+        // background-color: blue;
 
 
+        @include sm {
+            padding-top: 80px;
+            justify-content: space-around;
+            gap: 40px;
+        }
 
 
         @include md {
+            padding-top: 0;
             flex-direction: row;
+            gap: 0;
+            padding-top: 64px;
+            align-items: center;
+
+        }
+
+        @include lg {
+            // background-color: green;
+            padding-left: 0;
+            padding-right: 0;
         }
     }
 
     &__btn-container {
         display: flex;
         gap: 11px;
+
+        @include sm {
+            gap: 15px;
+        }
+
+        @include md {
+            gap: 20px;
+        }
     }
 
     &__text {
@@ -78,51 +72,110 @@
         flex-direction: column;
         justify-content: center;
         align-items: left;
-        background-color: pink;
+        // background-color: pink;
+        max-width: 300px;
+        margin: 0 auto;
 
-         @include sm {
-            justify-content: center;
+        @include sm {
+            max-width: unset;
             align-items: center;
-         }
+            display: flex;
+        }
+
+        @include md {
+            display: block;
+        }
+
+        @include lg {
+            margin-left: 16px;
+        }
+
 
     }
 
     &__image {
         display: none;
 
+        @include sm {
+            display: flex;
+            // background-color: yellow;
+            width: 310px;
+            height: 387px;
+            margin: 0 auto;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
         @include md {
             display: block;
-            background-color: yellow;
+            margin-right: 6px;
+
         }
     }
 
     &__polygon {
         position: absolute;
-        display: none;
+        z-index: -1;
+    }
+
+    .polygon__one {
+        position: absolute;
+        left: 26px;
+        top: 60px;
+
+        width: 100px;
+        height: 100px;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .polygon__two {
+        position: absolute;
+        left: 243px;
+        top: 135px;
+
+        width: 64.27px;
+        height: 64.27px;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
     }
 
     &__subtitle {
         font-family: 'Roboto';
         font-style: normal;
         font-weight: 400;
-        font-size: 18px;
+        font-size: 1.8rem;
         line-height: 21px;
         padding-bottom: 7px;
-      
 
 
+        @include md {
+            font-size: 2.4rem;
+        }
     }
 
     &__title {
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 800;
-        font-size: 30px;
+        font-size: 3.0rem;
         line-height: 37px;
         text-transform: capitalize;
         padding-bottom: 17px;
-     
 
+
+        @include md {
+            font-size: 3.6rem;
+        }
 
         span {
             color: $red-color;
@@ -130,3 +183,9 @@
         }
     }
 }
+
+
+/************ANIMATION***************/
+
+
+
