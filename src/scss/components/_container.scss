@@ -1,3 +1,58 @@
+/**********************Section Name****************/
+/**********************Section Name****************/
+/**********************Section Name****************/
+
+
+.section__name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 2.4rem;
+    line-height: 29px;
+    color: $gray-color;
+
+
+    @include md {
+        font-size: 3rem;
+    }
+
+    @include lg {
+        font-size: 3.2rem;
+    }
+}
+
+.section__title {
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: '';
+        background-color: $red-color;
+        width: 35%;
+        height: 3px;
+        bottom: -3px;
+        right: 0;
+
+        @include lg {
+            width: 26%;
+            bottom: -5px;
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
+/************Hero Container****************/
+/************Hero Container****************/
 /************Hero Container****************/
 
 
@@ -6,11 +61,12 @@
 
     background-image: url('/src/img/background.png');
     background-repeat: no-repeat;
-    background-size: 100% 60%;
-    background-position: bottom;
+    background-size: 100% 40%;
+    background-position: bottom left;
     margin: 0;
-    padding: 0;
     min-height: 719px;
+    margin-bottom: 100px;
+
 
 
     @include lg {
@@ -27,7 +83,7 @@
         width: 100%;
         padding-left: 27px;
         padding-right: 27px;
-        // background-color: blue;
+
 
 
         @include sm {
@@ -47,7 +103,6 @@
         }
 
         @include lg {
-            // background-color: green;
             padding-left: 0;
             padding-right: 0;
         }
@@ -87,7 +142,7 @@
         }
 
         @include lg {
-            margin-left: 16px;
+            margin-left: 116px;
         }
 
 
@@ -111,7 +166,7 @@
 
         @include md {
             display: block;
-            margin-right: 6px;
+            margin-right: 106px;
 
         }
     }
@@ -133,6 +188,13 @@
             width: 100%;
             height: 100%;
         }
+
+
+
+        @include lg {
+            left: 242px;
+            top: 30px;
+        }
     }
 
     .polygon__two {
@@ -146,6 +208,23 @@
         img {
             width: 100%;
             height: 100%;
+        }
+
+        @include sm {
+            left: 550px;
+            top: 164px;
+        }
+
+        @include md {
+            left: 243px;
+            top: 135px;
+        }
+
+
+
+        @include lg {
+            left: 468px;
+            top: 64px;
         }
     }
 
@@ -185,7 +264,483 @@
 }
 
 
+/************Clients***************/
+/************Clients***************/
+/************Clients***************/
+
+
+.clients {
+    padding-bottom: 86px;
+
+
+
+    @include lg {
+        padding-bottom: 100px;
+
+    }
+
+
+    .wrapper {
+        box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.12);
+        border-radius: 0;
+        padding: 30px 0px 26px 0px;
+        display: block;
+        margin: 0 auto;
+
+
+
+        @include md {
+            border-radius: 24px;
+            padding: 30px 10px 26px 10px;
+        }
+
+        @include lg {
+            padding: 30px 54px 26px 54px;
+
+        }
+    }
+
+    &__name {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 2.4rem;
+        line-height: 29px;
+        color: $gray-color;
+        padding-bottom: 40px;
+
+
+        @include md {
+            font-size: 3rem;
+            padding-bottom: 44px;
+        }
+
+        @include lg {
+            font-size: 3.2rem;
+            padding-bottom: 48px;
+        }
+    }
+
+    &__title {
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: '';
+            background-color: $red-color;
+            width: 20%;
+            height: 3px;
+            bottom: -3px;
+            right: 0;
+
+        }
+    }
+
+    .clients__content {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 30px;
+        justify-content: center;
+        row-gap: 28px;
+
+
+
+
+        @include md {
+            gap: 45px;
+        }
+
+        @include lg {
+            gap: 81px;
+
+        }
+    }
+
+    &__box {
+        height: 24px;
+
+        @include md {
+            height: 28px;
+        }
+
+        @include lg {
+            height: 32px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+
+}
+
+
+/************About Container****************/
+/************About Container****************/
+/************About Container****************/
+
+.about {
+    padding-bottom: 100px;
+
+
+
+
+
+    .section__name {
+        padding-bottom: 53px;
+
+        @include lg {
+            padding-bottom: 36px;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 53px;
+        justify-content: center;
+        align-items: center;
+
+
+
+        @include md {
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 50px;
+            padding-left: 50px;
+            padding-right: 50px;
+
+
+        }
+
+        @include lg {
+            gap: 102px;
+            padding-left: 70px;
+            padding-right: 99px;
+
+        }
+    }
+
+    &__text {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 32px;
+        color: black;
+
+        @include lg {
+            width: 571px;
+        }
+    }
+
+    &__paragraph {
+
+        &:nth-of-type(1) {
+            padding-bottom: 10px;
+        }
+
+    }
+
+    &__image {
+        width: 250px;
+        height: 250px;
+        margin: 0 auto;
+
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        @include md {
+            display: flex;
+
+
+
+        }
+
+
+
+    }
+}
+
+/************Project Container****************/
+/************Project Container****************/
+/************Project Container****************/
+
+
+
+
+.project {
+
+
+
+    .section__name {
+        padding-bottom: 53px;
+    }
+
+
+
+
+    .wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background-color: $grean-color;
+
+
+    }
+
+    &__content {
+
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        row-gap: 40px;
+
+        background-color: red;
+
+
+        @include sm {
+            flex-direction: row;
+            display: flex;
+            justify-content: flex-end;
+            row-gap: 30px;
+
+
+
+        }
+
+        @include md {
+            row-gap: 40px;
+            padding: 0px 40px 80px 40px;
+        }
+
+        @include lg {
+            padding: 0px 70px 100px 70px;
+        }
+    }
+
+
+
+
+
+    .box {
+        display: flex;
+        flex-direction: column;
+
+        @include sm {
+            flex-direction: row;
+        }
+
+
+    
+
+        &__image {
+            width: 351px;
+            height: 200px;
+            position: relative;
+           
+            
+
+            @include sm {
+                width: 304px;
+                height: 200px;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                
+            }
+
+       
+        }
+
+        &__title {
+            position: absolute;
+            bottom:12px;
+            text-align: center;
+            width: 100%;
+            z-index: 2;
+         
+
+            
+            
+
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 1.8rem;
+            line-height: 21px;
+            color: #FEFEFE;
+        }
+
+
+    }
+
+    .gradient {
+        height: 66px;
+        width: 100%;
+        position: absolute;
+        background: linear-gradient(180deg, rgba(43, 45, 66, 0) 0%, rgba(43, 45, 66, 0.54) 19.27%, rgba(43, 45, 66, 0.9) 40.1%, #2B2D42 57.81%);
+        bottom: 0;
+        opacity: 0.95;
+        z-index: 1;
+    }
+
+    .project__btn {
+        margin: 16px 30px 150px 30px;
+        display: block;
+
+        @include sm {
+            display: flex;
+            margin-right: auto;
+        }
+
+        @include lg {
+            margin: unset;
+            margin-right: auto;
+        }
+
+        .btn {
+            margin-left: 10px;
+        }
+    }
+
+
+
+}
+
+
+
+/************ANIMATION***************/
+/************ANIMATION***************/
 /************ANIMATION***************/
 
 
 
+.header__content {
+    animation: fadeDown 1000ms;
+    opacity: 1;
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero__subtitle {
+
+    animation: fadeIn 800ms forwards;
+    opacity: 0;
+    animation-delay: 400ms;
+
+}
+
+
+@keyframes fadeIn {
+
+    to {
+        opacity: 1;
+    }
+}
+
+.hero__title {
+
+    animation: fadeToRight 800ms forwards cubic-bezier(0.22, 0.32, 0, 1.54);
+    opacity: 0;
+    animation-delay: 800ms;
+
+
+}
+
+
+@keyframes fadeToRight {
+
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+.hero__btn-container {
+
+    .btn:nth-of-type(1) {
+        animation: fadeIn 1000ms forwards;
+        opacity: 0;
+        animation-delay: 1200ms;
+    }
+
+    .btn:nth-of-type(2) {
+        animation: fadeIn 1000ms forwards;
+        opacity: 0;
+        animation-delay: 1200ms;
+    }
+}
+
+
+
+.hero__image {
+    animation: fadeToLeft 1200ms forwards;
+    opacity: 0;
+    animation-delay: 600ms;
+
+}
+
+@keyframes fadeToLeft {
+    from {
+        transform: translateX(60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+.polygon__one,
+.polygon__two {
+    opacity: 0;
+    animation-name: fadeIn, rotate;
+    animation-duration: 800ms, 80s;
+    animation-delay: 1800ms;
+    animation-iteration-count: 1, infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in, linear;
+
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(360deg);
+    }
+
+    to {
+        transform: rotate(0);
+    }
+}

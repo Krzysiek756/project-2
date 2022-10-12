@@ -44,7 +44,7 @@
 
         @include md {
             border-color: $grean-color;
-            color: #fff;
+            color: $gray-color;
             box-shadow: 0 0 40px 40px $grean-color inset, 0 0 0 0 $grean-color;
             transition: all 150ms ease-in-out;
 
