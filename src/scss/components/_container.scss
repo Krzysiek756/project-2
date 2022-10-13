@@ -493,7 +493,7 @@
         display: flex;
         align-items: center;
         justify-content: space-around;
-        background-color: $grean-color;
+
 
 
     }
@@ -506,7 +506,6 @@
         flex-wrap: wrap;
         row-gap: 40px;
 
-        background-color: red;
 
 
         @include sm {
@@ -542,39 +541,42 @@
         }
 
 
-    
+
 
         &__image {
             width: 351px;
             height: 200px;
             position: relative;
-           
-            
 
-            @include sm {
+            @include md {
                 width: 304px;
                 height: 200px;
+            }
+
+            @include lg {
+                width: unset;
+                height: unset;
             }
 
             img {
                 width: 100%;
                 height: 100%;
-                
+
             }
 
-       
+
         }
 
         &__title {
             position: absolute;
-            bottom:12px;
+            bottom: 12px;
             text-align: center;
             width: 100%;
             z-index: 2;
-         
 
-            
-            
+
+
+
 
             font-family: 'Roboto';
             font-style: normal;
@@ -598,10 +600,17 @@
     }
 
     .project__btn {
-        margin: 16px 30px 150px 30px;
+        margin: 16px 15px 150px 15px;
         display: block;
 
         @include sm {
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @include md {
+            margin: unset;
             display: flex;
             margin-right: auto;
         }
@@ -619,6 +628,324 @@
 
 
 }
+
+/************Testominal***************/
+/************Testominal***************/
+/************Testominal***************/
+
+.testimonial {
+
+    padding-bottom: 100px;
+
+    .section__name {
+        padding-bottom: 50px;
+    }
+
+    .section__title {
+        position: relative;
+
+        &::before {
+            width: 25%;
+
+            @include lg {
+                width: 20%;
+
+            }
+
+        }
+    }
+
+    &__content {
+        padding: 0 30px;
+
+        @include md {
+            padding: 0 30px;
+        }
+
+        @include lg {
+            padding: 0 100px;
+        }
+    }
+
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        position: relative;
+        width: 100%;
+
+
+
+
+        @include md {
+            padding: 0 70px;
+        }
+
+    }
+
+    .slider__member {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+
+        &:nth-child(2) {
+            display: none;
+        }
+
+        &:nth-child(3) {
+            display: none;
+        }
+
+        @include lg {
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            gap: 10px;
+            padding-left: 12px;
+            padding-right: 12px;
+
+        }
+
+        @include xl {
+            gap: 42px;
+            padding-left: 52px;
+            padding-right: 42px;
+        }
+    }
+
+
+
+    .slider__img {
+        width: 151px;
+        height: 151px;
+        margin-bottom: 50px;
+
+
+        @include md {
+            width: 200px;
+            height: 200px;
+        }
+
+        @include lg {
+            display: flex;
+            width: 100%;
+            max-width: 200px;
+            order: 2;
+            margin-bottom: 54px;
+
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .slider__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+        @include lg {
+            order: 1;
+            align-self: flex-start;
+        }
+
+
+
+    }
+
+    .slider__p {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 32px;
+        color: black;
+        text-align: left;
+        margin-bottom: 30px;
+
+        @include lg {
+            margin-bottom: 21px;
+        }
+
+    }
+
+    .slider__name {
+
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 32px;
+        color: #FEFEFE;
+        background-color: $gray-color;
+        padding: 3px 13px;
+        width: max-content;
+        align-self: flex-start;
+        margin-left: 10px;
+
+        margin-bottom: 42px;
+
+
+        @include lg {
+            padding-bottom: 0;
+        }
+
+
+
+    }
+
+
+    .btn__next,
+    .btn__prev {
+        position: absolute;
+        top: 40px;
+
+        @include lg {
+            top: 65px;
+        }
+    }
+
+    .btn__prev {
+        left: 0;
+    }
+
+    .btn__next {
+        right: 0;
+    }
+}
+
+
+/************Contact US***************/
+/************Contact US***************/
+/************Contact US***************/
+
+
+.contact {
+
+    padding-bottom: 86px;
+
+
+    
+    .section__title {
+        position: relative;
+
+        &::before {
+           
+                width: 43px;
+
+
+        }
+    }
+
+
+
+    .section__name {
+        padding-bottom: 50px;
+
+        @include md {
+            padding-bottom: 57px;
+        }
+    }
+
+    &__content {
+        padding: 0 30px;
+
+        @include md {
+            padding: 0 30px;
+        }
+
+        @include lg {
+            padding: 0 100px;
+        }
+
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+
+        @include md {
+            gap: 36px;
+        }
+
+    }
+
+
+    .group__top {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        @include md {
+            flex-direction: row;
+
+            gap: 32px;
+            width: auto;
+            justify-content: space-between;
+        }
+
+
+        input {
+            width: 100%;
+            background: #FEFEFE;
+            border: 1px solid #2B2D42;
+            box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.11);
+            border-radius: 24px;
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            padding: 15px 30px;
+        }
+
+
+    }
+
+    .group__email {
+        display: flex;
+        flex-direction: column;
+
+        textarea {
+            padding: 16px 30px;
+            background: #FEFEFE;
+            border: 1px solid #2B2D42;
+            box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.11);
+            border-radius: 24px;
+            border: 1px solid $gray-color;
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            height: 166px;
+            color: black;
+            width: 100%;
+            resize: none;
+            margin-bottom: 20px;
+
+
+            @include md {
+                padding-bottom: 33px;
+            }
+        }
+    }
+
+}
+
 
 
 
